@@ -7,9 +7,9 @@
             $email = $_POST['email'];
             $password = $_POST['mdp'];
 
-            $ddb = new PDO('mysql:host=localhost; dbname=screaming; charset=UTF8', 'root', '');
+            $bdd = new PDO('mysql:host=localhost; dbname=screaming; charset=UTF8', 'root', '');
             $sql = "SELECT * FROM `users` WHERE email = '$email' AND password = '$password'";
-            $query = $ddb->prepare($sql);
+            $query = $bdd->prepare($sql);
             $query->execute();
             $result = $query->fetch(PDO::FETCH_ASSOC);
             if ($result) {

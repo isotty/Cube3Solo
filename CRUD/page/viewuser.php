@@ -1,9 +1,9 @@
 <?php
 
 function getUsers(){
-  $ddb = new PDO('mysql:host=localhost;dbname=html','root','root');
+  $bdd = new PDO('mysql:host=localhost;dbname=html','root','root');
   $sql = "SELECT * FROM users ";
-  $query = $ddb->prepare($sql);
+  $query = $bdd->prepare($sql);
   $query->execute();
   $result=$query->fetchAll(PDO::FETCH_ASSOC);
   return $result;
