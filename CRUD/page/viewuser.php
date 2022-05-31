@@ -1,55 +1,49 @@
+<?php
+
+function getUsers(){
+  $ddb = new PDO('mysql:host=localhost;dbname=html','root','root');
+  $sql = "SELECT * FROM users ";
+  $query = $ddb->prepare($sql);
+  $query->execute();
+  $result=$query->fetchAll(PDO::FETCH_ASSOC);
+  return $result;
+}
+
+  $users = getUsers();
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/viewuser.css">
     <title>Nom du Site</title>
 </head>
 
 <body>
-
-    <nav>
-        <ul class="gauche">
-            <li><a href="./accueil.html">Accueil</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="./forum.html">Forum</a></li>
-            <li><a href="./magasin.html">Boutique</a></li>
-        </ul>
-        <ul class="droite">
-            <li><a href="./login.html">Se connecter</a></li>
-            <li><a href="./signup.html">S'inscrire</a></li>
-        </ul>
+    <nav class="">
+        <span class="">    
+            <?php echo($_SESSION['lastname']) ?>
+            <?php echo($_SESSION['firstname']) ?>
+        </span>
     </nav>
-    <form action="login.php" method="post">
-        <div>
-            <img class="" src="#">
-        </div>
-        <div>
-            <input class="logininput" type="text"  name="identifant" placeholder="Email ou Pseudonyme"> 
-        </div>
-        <HR width="260px">
-        <div>
-            <input class="logininput" type="text"  name="mdp" placeholder="Mot de passe"> 
-        </div></br>  
-        <div>
-            <button class="loginbutton" type="submit">
-                Se connecter
-            </button>
-        </div>
-        <HR width="100px">
-        <div>
-            <span class="loginhref"><a href="#">Mot de passe oublier?</a></span>
-        </div>
-        <div>
-            <span class="loginhref"><a href="#">Se créer un compte</a></span>
-        </div>
+    <form>
+        <?php 
+            foreach($users as $user):
+            extract($user);
+        ?>
+        <li id="<?php echo $id ?>">
+            <span><?php echo $nom ?></span>
+            <span><?php echo $prenom ?></span>
+            <span><?php echo $identifiant ?></span>
+            <form method="POST" action="./updateUser.php">
+                <button type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
+            </form>
+            <form method="POST" action="../controller/deleteUser.php">
+                <button type="submit" name="id" value="<?php echo $id ?>">Supprimer</button>
+            </form>
+        </li>
+        <?php endforeach; ?>
     </form>
-    <footer>
-        <ul class="footer">
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">À propos</a></li>
-        </ul>
-    </footer>
 </body>
 </html>

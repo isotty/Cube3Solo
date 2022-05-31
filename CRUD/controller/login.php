@@ -7,18 +7,17 @@
             $email = $_POST['email'];
             $password = $_POST['mdp'];
 
-            $db = new PDO('mysql:host=localhost; dbname=screaming; charset=UTF8', 'root', '');
-            $sql_query = "SELECT * FROM `user` WHERE email = '$email' AND password = '$password'";
-            $query = $db->prepare($sql_query);
+            $ddb = new PDO('mysql:host=localhost; dbname=screaming; charset=UTF8', 'root', '');
+            $sql = "SELECT * FROM `users` WHERE email = '$email' AND password = '$password'";
+            $query = $ddb->prepare($sql);
             $query->execute();
-            $res = $query->fetch(PDO::FETCH_ASSOC);
-            if ($res) {
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            if ($result) {
                 header('Location: ../page/index.php');
-                $_SESSION['email']= $res['email'];
-                $_SESSION['firstname']= $res['first_name'];
-                $_SESSION['lastname']= $res['last_name'];
+                $_SESSION['firstname']= $result['firstname'];
+                $_SESSION['lastname']= $result['lastname'];
             } else {
-                echo '';
+                header('Location: ..\page\connexion.php?error=user');;
             }
         }
     }

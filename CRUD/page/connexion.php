@@ -1,35 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/connexion.css">
     <title>Nom du Site</title>
 </head>
 
 <body>
-    <nav>
-        <ul class="gauche">
-            <li><a href="./accueil.html">Accueil</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="./forum.html">Forum</a></li>
-            <li><a href="./magasin.html">Boutique</a></li>
-        </ul>
-        <ul class="droite">
-            <li><a href="./login.html">Se connecter</a></li>
-            <li><a href="./signup.html">S'inscrire</a></li>
-        </ul>
+    <nav class="">
     </nav>
-    <form action="" method="post">
-        <div>
-  
+    <form action="../controller/login.php" method="post">
+        <div class="">
+            <span>Connexion :</span>
+            <input class="" name="email" type="email" placeholder="Email"></input>
+            <input class="" name="mdp" type="password" placeholder="Mot de passe"></input>
+            <button class="" >Connexion</button>
+            <?php if(isset($_GET['error']) && $_GET['error'] === 'user'){?><span class="">Erreur lors de la création du compte</span><?php }?>
         </div>
     </form>
-    <footer>
-        <ul class="footer">
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">À propos</a></li>
-        </ul>
-    </footer>
 </body>
 </html>
