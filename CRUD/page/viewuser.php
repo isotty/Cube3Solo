@@ -36,7 +36,7 @@ function getUsers(){
             <span><?php echo $nom ?></span>
             <span><?php echo $prenom ?></span>
             <span><?php echo $identifiant ?></span>
-            <form method="POST" action="./updateUser.php">
+            <form method="POST" action="../controller/updateUser.php">
                 <button type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
             </form>
             <form method="POST" action="../controller/deleteUser.php">
