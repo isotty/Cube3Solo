@@ -12,13 +12,13 @@
       SET lastname = :lastname,
           firstname = :firstname,
           email = :email,
-          pwd = :pwd
+          password = :password
       WHERE id = :id";
       $valeur = array(
           'lastname' => $lastname,
           'firstname' => $firstname,
           'email' => $email,
-          'pwd' => $pwd,
+          'password' => $pwd,
           'id' => $id
       );
       $query = $db->prepare($sql);
@@ -26,7 +26,7 @@
       if($result){
         header('Location: ../page/viewuser.php');
       }else{
-        header('Location: ../administration/updateUser.php?error=update&id='.$_POST["id"]);
+        header('Location: ../page/updateuser.php?error=update');
       }
     }else{
     }
