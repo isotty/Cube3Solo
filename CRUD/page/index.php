@@ -10,11 +10,11 @@
     <nav class="">
     </nav>
     <form action="../controller/login.php" method="post">
-        <div class="card">
+        <div class="">
             <span>Connexion :</span>
             <input class="" name="email" type="email" placeholder="Email"></input>
             <input class="" name="mdp" type="password" placeholder="Mot de passe"></input>
-            <button class="btn" >Connexion</button>
+            <button class="" >Connexion</button>
             <?php if(isset($_GET['error']) && $_GET['error'] === 'user'){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>
