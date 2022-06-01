@@ -8,14 +8,14 @@
 
 <body>
     <nav class="">
-        <span class="">
-            <?php echo($_SESSION['lastname']) ?>
-            <?php echo($_SESSION['firstname']) ?>
-        </span>
     </nav>
-    <form>
-        <div class="">
-            <a href="..\page\viewuser.php"><img class="" src="..\image\dashbord.png"></img></a>
+    <form action="../controller/login.php" method="post">
+        <div class="card">
+            <span>Connexion :</span>
+            <input class="" name="email" type="email" placeholder="Email"></input>
+            <input class="" name="mdp" type="password" placeholder="Mot de passe"></input>
+            <button class="btn" >Connexion</button>
+            <?php if(isset($_GET['error']) && $_GET['error'] === 'user'){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>
 </body>

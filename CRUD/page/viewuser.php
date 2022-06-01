@@ -1,7 +1,7 @@
 <?php
 
 function getUsers(){
-  $bdd = new PDO('mysql:host=localhost;dbname=html','root','root');
+  $bdd = new PDO('mysql:host=localhost;dbname=user','root','');
   $sql = "SELECT * FROM users ";
   $query = $bdd->prepare($sql);
   $query->execute();
@@ -23,24 +23,23 @@ function getUsers(){
 <body>
     <nav class="">
         <span class="">    
-            <?php echo($_SESSION['lastname']) ?>
-            <?php echo($_SESSION['firstname']) ?>
         </span>
     </nav>
     <form>
+        <button class="btn" >Connexion</button>
         <?php 
             foreach($users as $user):
             extract($user);
         ?>
         <li id="<?php echo $id ?>">
-            <span><?php echo $nom ?></span>
-            <span><?php echo $prenom ?></span>
-            <span><?php echo $identifiant ?></span>
-            <form method="POST" action="../controller/updateUser.php">
-                <button type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
+            <span><?php echo $firstname ?></span>
+            <span><?php echo $lastname ?></span>
+            <span><?php echo $email ?></span>
+            <form method="POST" action="../controller/updateuser.php">
+                <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
             </form>
-            <form method="POST" action="../controller/deleteUser.php">
-                <button type="submit" name="id" value="<?php echo $id ?>">Supprimer</button>
+            <form method="POST" action="../controller/deleteuser.php">
+                <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Supprimer</button>
             </form>
         </li>
         <?php endforeach; ?>
