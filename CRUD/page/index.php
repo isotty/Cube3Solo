@@ -15,7 +15,7 @@
             <input class="" name="email" type="email" placeholder="Email"></input>
             <input class="" name="mdp" type="password" placeholder="Mot de passe"></input>
             <button class="" >Connexion</button>
-            <?php if(isset($_GET['error']) && $_GET['error'] === 'user'){?><span class="">Erreur lors de la connexion</span><?php }?>
+            <?php if(isset($_GET['error'])){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>
 </body>

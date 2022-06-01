@@ -26,7 +26,7 @@ function getUsers(){
         </span>
     </nav>
     <form>
-        <button class="btn" >Connexion</button>
+        <a href='.\createuser.php' class="" >Ajouter nouvelle utilisateur</a>
         <?php 
             foreach($users as $user):
             extract($user);
@@ -35,7 +35,7 @@ function getUsers(){
             <span><?php echo $firstname ?></span>
             <span><?php echo $lastname ?></span>
             <span><?php echo $email ?></span>
-            <form method="POST" action="../controller/updateuser.php">
+            <form method="POST" action="./createuser.php">
                 <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
             </form>
             <form method="POST" action="../controller/deleteuser.php">
