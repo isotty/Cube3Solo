@@ -10,13 +10,25 @@
 <body>
     <nav>
     </nav>
-    <form action="../controller/createuser.php" method="post">
+    <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-l" action="../controller/createuser.php" method="post">
         <div class="">
             <span>Connexion :</span>
-            <input class="" name="firstname" type="text" placeholder="Prénom"></input>
-            <input class="" name="lastname" type="text" placeholder="Nom"></input>
-            <input class="" name="email" type="email" placeholder="Email"></input>
-            <input class="" name="password" type="password" placeholder="Mot de passe"></input>
+            <div class="mb-3">
+                <label class="form-label">Prénom :</label>
+                <input class="form-control" name="firstname" type="text" placeholder="Prénom"></input>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nom :</label>
+                <input class="form-control" name="lastname" type="text" placeholder="Nom"></input>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email :</label>
+                <input class="form-control" name="email" type="email" placeholder="Email"></input>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mot de passe :</label>
+                <input class="form-control" name="password" type="password" placeholder="Mot de passe"></input>
+            </div>
             <button class="" >Créer utilisateur</button>
             <?php if(isset($_GET['error']) && $_GET['error'] === 'email'){?><span class="">Email déja attribuer</span><?php }?>
             <?php if(isset($_GET['error']) && $_GET['error'] === 'create'){?><span class="">Erreur lors de la création</span><?php }?>

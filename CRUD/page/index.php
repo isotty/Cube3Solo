@@ -21,7 +21,7 @@
                 <label class="form-label">Mot de passe :</label>
                 <input class="form-control" name="mdp" type="password" placeholder="Mot de passe"></input>
             </div>
-            <button class="btn btn-primary" >Connexion</button>
+            <button class="btn" >Connexion</button>
             <?php if(isset($_GET['error'])){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>

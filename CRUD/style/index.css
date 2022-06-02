@@ -14,7 +14,7 @@ body {
 }
 
 .btn{
-    display: flex;
+    display: center;
     flex-direction: row;
-    width: 200px;
+    width: 120px;
 }
