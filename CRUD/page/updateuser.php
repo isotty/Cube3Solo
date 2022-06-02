@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/index.css">
-    <title>Connexion</title>
+    <title>Modifier utilisateur</title>
 </head>
 
 <form  class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-l"  action="../controller/updateuser.php" method="post">
@@ -34,7 +34,7 @@
   <input type="hidden" name="id" value="<?php echo $_POST['id'] ?>">
   <?php if(isset($_GET['error']) && $_GET['error'] === 'update'){?><span class="">Erreur lors de la mise a jour des données</span><?php }?>
   <div class="">
-      <button type="submit"  class="">Envoyer</button>
+      <button type="submit"  class="">Modifier</button>
   </div>
 </form>
 </html>
