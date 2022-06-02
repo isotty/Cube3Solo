@@ -21,9 +21,8 @@ function getUsers(){
 </head>
 
 <body>
-    <nav class="">
-        <span class="">    
-        </span>
+    <nav>
+
     </nav>
     <form>
         <a href='.\createuser.php' class="" >Ajouter nouvelle utilisateur</a>

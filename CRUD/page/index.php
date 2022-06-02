@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <nav class="">
+    <nav>
     </nav>
     <form action="../controller/login.php" method="post">
         <div class="">

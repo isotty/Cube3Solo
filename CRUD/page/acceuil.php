@@ -7,9 +7,7 @@
 </head>
 
 <body>
-    <nav class="">
-        <span class="">
-        </span>
+    <nav>
     </nav>
     <form>
         <div class="">
