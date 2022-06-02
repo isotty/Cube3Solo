@@ -12,7 +12,7 @@
     </nav>
     <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-l" action="../controller/createuser.php" method="post">
         <div class="">
-            <span>Connexion :</span>
+            <h1>Création d'un utilisateur :</h1>
             <div class="mb-3">
                 <label class="form-label">Prénom :</label>
                 <input class="form-control" name="firstname" type="text" placeholder="Prénom"></input>
