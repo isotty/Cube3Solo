@@ -10,9 +10,9 @@
 <body>
     <nav>
     </nav>
-    <form>
-        <div>Dashbord</div>
-        <div class="lien">
+    <form class="lien">
+        <h2>Dashbord</h2>
+        <div>
             <a href="..\page\viewuser.php"><img class="" src="..\image\dashbord.png"></img></a>
         </div>
     </form>

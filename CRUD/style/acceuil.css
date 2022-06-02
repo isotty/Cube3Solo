@@ -8,8 +8,5 @@ nav {
 }
 
 .lien {
-    list-style-type: none;
-    display: center;
-    flex-direction: row;
-    margin: 0px;
+    text-align: center
 }
