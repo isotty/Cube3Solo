@@ -16,16 +16,14 @@ function getUsers(){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/viewuser.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>View users</title>
+    <link rel="stylesheet" href="../styles/viewuser.css">
+    <title>Nom du Site</title>
 </head>
 
 <body>
     <nav>
-
     </nav>
-    <form class="grid">
+    <form>
         <a href='.\createuser.php' class="" >Ajouter nouvelle utilisateur</a>
         <?php 
             foreach($users as $user):
@@ -35,7 +33,7 @@ function getUsers(){
             <span><?php echo $firstname ?></span>
             <span><?php echo $lastname ?></span>
             <span><?php echo $email ?></span>
-            <form method="POST" action="./updateuser.php">
+            <form method="POST" action="./createuser.php">
                 <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
             </form>
             <form method="POST" action="../controller/deleteuser.php">
