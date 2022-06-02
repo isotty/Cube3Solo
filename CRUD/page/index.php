@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../style/index.css">
     <title>Connexion</title>
 </head>
 
 <body>
     <nav>
     </nav>
-    <form action="../controller/login.php" method="post">
+    <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-l" action="../controller/login.php" method="post">
         <div class="body">
             <span>Connexion :</span>
             <div class="mb-3">
@@ -21,7 +21,7 @@
                 <label class="form-label">Mot de passe :</label>
                 <input class="form-control" name="mdp" type="password" placeholder="Mot de passe"></input>
             </div>
-            <button class="btn btn-primary" >Connexion</button>
+            <button class="w-full bg-[#1D1D1D] mt-8 mb-4 text-white p-3 rounded-lg font-semibold text-lg" >Connexion</button>
             <?php if(isset($_GET['error'])){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>
