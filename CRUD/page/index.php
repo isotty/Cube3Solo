@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/index.css">
-    <title>Nom du Site</title>
+    <title>Connexion</title>
 </head>
 
 <body>
     <nav>
     </nav>
     <form action="../controller/login.php" method="post">
-        <div class="">
+        <div class="body">
             <span>Connexion :</span>
             <input class="" name="email" type="email" placeholder="Email"></input>
             <input class="" name="mdp" type="password" placeholder="Mot de passe"></input>

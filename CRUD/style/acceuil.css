@@ -3,7 +3,13 @@ nav {
     background-color: #6558af;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 40px;
     line-height: 200%;
+}
+
+.lien {
+    list-style-type: none;
+    display: center;
+    flex-direction: row;
+    margin: 0px;
 }

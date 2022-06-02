@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/index.css">
-    <title>Nom du Site</title>
+    <title>Créer utilisateur</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <input class="" name="password" type="password" placeholder="Mot de passe"></input>
             <button class="" >Créer utilisateur</button>
             <?php if(isset($_GET['error']) && $_GET['error'] === 'email'){?><span class="">Email déja attribuer</span><?php }?>
-            <?php if(isset($_GET['error']) && $_GET['error'] === 'user'){?><span class="">Erreur lors de la création</span><?php }?>
+            <?php if(isset($_GET['error']) && $_GET['error'] === 'create'){?><span class="">Erreur lors de la création</span><?php }?>
         </div>
     </form>
 </body>

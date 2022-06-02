@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/acceuil.css">
-    <title>Nom du Site</title>
+    <title>Acceuil</title>
 </head>
 
 <body>
     <nav>
     </nav>
     <form>
-        <div class="">
+        <div>Dashbord</div>
+        <div class="lien">
             <a href="..\page\viewuser.php"><img class="" src="..\image\dashbord.png"></img></a>
         </div>
     </form>
