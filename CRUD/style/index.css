@@ -12,3 +12,9 @@ body {
     margin:0 auto;
     margin-top:10%;
 }
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
