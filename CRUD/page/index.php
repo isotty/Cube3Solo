@@ -12,7 +12,7 @@
     </nav>
     <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-l" action="../controller/login.php" method="post">
         <div class="body">
-            <span>Connexion :</span>
+            <h1>Connexion :</h1>
             <div class="mb-3">
                 <label class="form-label">Email :</label>
                 <input class="form-control" name="email" type="email" placeholder="Email"></input>
@@ -21,7 +21,7 @@
                 <label class="form-label">Mot de passe :</label>
                 <input class="form-control" name="mdp" type="password" placeholder="Mot de passe"></input>
             </div>
-            <button class="w-full bg-[#1D1D1D] mt-8 mb-4 text-white p-3 rounded-lg font-semibold text-lg" >Connexion</button>
+            <button class="btn btn-primary" >Connexion</button>
             <?php if(isset($_GET['error'])){?><span class="">Erreur lors de la connexion</span><?php }?>
         </div>
     </form>
