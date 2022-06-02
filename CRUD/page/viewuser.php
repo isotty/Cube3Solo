@@ -33,7 +33,7 @@ function getUsers(){
             <span><?php echo $firstname ?></span>
             <span><?php echo $lastname ?></span>
             <span><?php echo $email ?></span>
-            <form method="POST" action="./createuser.php">
+            <form method="POST" action="./updateuser.php">
                 <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
             </form>
             <form method="POST" action="../controller/deleteuser.php">
