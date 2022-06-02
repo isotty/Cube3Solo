@@ -16,7 +16,8 @@ function getUsers(){
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles/viewuser.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/viewuser.css">
     <title>Nom du Site</title>
 </head>
 
@@ -24,27 +25,35 @@ function getUsers(){
     <nav>
     </nav>
     <form class="container">
-        <a href='.\createuser.php' class="" >Ajouter nouvelle utilisateur</a>
+    <br>
+        <div class="col" ><a href='.\createuser.php' >Ajouter nouvelle utilisateur</a></div>
+        <br>
+        <ul class="row">
+            <span class="col align-self-start">Prénom :</span>
+            <span class="col">Nom :</span>
+            <span class="col">Email :</span>
+            <span class="col"></span>
+            <span class="col"></span>
+        </ul>
+
         <?php 
             foreach($users as $user):
             extract($user);
         ?>
-        <li>
-            <div>Prenom :</div>
-            <div>Nom :</div>
-            <div>Email :</div>
-        </li>        
-        <li class="row" id="<?php echo $id ?>">
-            <div class="col"><?php echo $firstname ?></div>
-            <div class="col"><?php echo $lastname ?></div>
-            <div class="col"><?php echo $email ?></div>
-            <div class="col"><form method="POST" action="./updateuser.php">
+        <table>
+        <hr>
+        <ul class="row" id="<?php echo $id ?>">
+            <span class="col"><?php echo $firstname ?></span>
+            <span class="col"><?php echo $lastname ?></span>
+            <span class="col"><?php echo $email ?></span>
+            <span class="col"><form method="POST" action="./updateuser.php">
                 <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Modifier</button>
-            </form></div>
-            <div class="col"><form method="POST" action="../controller/deleteuser.php">
+            </form></span>
+            <span class="col"><form method="POST" action="../controller/deleteuser.php">
                 <button class="btn" type="submit" name="id" value="<?php echo $id ?>">Supprimer</button>
-            </form></div>
-        </li>
+            </form></span>
+            </table>
+
         <?php endforeach; ?>
     </form>
 </body>
